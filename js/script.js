@@ -6,13 +6,7 @@
 
   function showSidebar(){
     const sidebarMenu = document.querySelector('.sidebar-menu');
-
-    if(sidebarMenu == 'show') {
-      sidebarMenu.classList.remove('show');
-    }
-    else {
-      sidebarMenu.classList.add('show');      
-    }
+    sidebarMenu.classList.toggle('show');
   }
 
 

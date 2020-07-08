@@ -353,21 +353,25 @@ template {
 }
 
 .show {
-  background-color: palegreen !important;
+  background-color: #004d49 !important;
 }
 
 .sidebar-menu {
-  display: none;
-  display: -ms-flexbox;
-  display: flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -ms-flex-direction: column;
       flex-direction: column;
   height: 100vh;
   background-color: #191919;
+  width: 50px;
 }
 
-.menu {
-  font-size: 16px;
+.sidebar-menu.show {
+  width: auto;
+}
+
+.menu-item {
+  font-size: 14px;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 400;
   color: #999999;
@@ -385,12 +389,20 @@ template {
 .logo {
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: start;
-      justify-content: flex-start;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+}
+
+.logo-img {
+  display: none;
+  color: white;
+}
+
+.show .logo-img {
+  display: block;
 }
 
 .hamburger {
-  margin-left: 105px;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: end;

@@ -11,19 +11,23 @@
 }
 
 .show {
-  background-color: palegreen !important;
+  background-color:rgb(0, 77, 73) !important;
+
 }
 
 .sidebar-menu {
-  display: none;
-  display:flex;
+  display: inline-flex;
   flex-direction: column;
   height: 100vh;
   background-color: #191919;
+  width: 50px;
+  &.show {
+    width: auto;
+  } 
 }
 
-.menu {
-  font-size: 16px;
+.menu-item {
+  font-size: 14px;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 400;
   color: #999999;
@@ -37,11 +41,18 @@
 
 .logo {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
 } 
 
+.logo-img {
+  display: none;
+  color: white;
+  .show & {
+    display: block;
+  }
+}
+
 .hamburger {
-  margin-left: 105px;
   display: flex;
   justify-content: flex-end;
 }
